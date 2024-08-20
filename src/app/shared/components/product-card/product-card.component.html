@@ -1,0 +1,28 @@
+<div class="product-card">
+  <div class="deal-of-the-day">
+    <p>Deal of the Day</p>
+    <div class="timer">
+      <span>{{ hours }} <small>hour</small></span> :
+      <span>{{ minutes }} <small>min</small></span> :
+      <span>{{ seconds }} <small>sec</small></span>
+    </div>
+  </div>
+  <div class="product-image">
+    <img [src]="imageSrc" alt="{{ title }}">
+  </div>
+  <div class="product-details">
+    <h4>{{ title }}</h4>
+    <p>{{ description }}</p>
+    <div class="rating">
+      <ng-container *ngFor="let star of reviews; let i = index">
+        <fa-icon ngif [icon]="i < getRating() ? faStar : ''"></fa-icon>
+      </ng-container>
+      <span>({{ reviews.length }})</span>
+    </div>
+    <div class="pricing">
+      <span class="current-price">{{ currentPrice | currency }}</span>
+      <span class="original-price">{{ originalPrice | currency }}</span>
+      <span class="discount">-{{ discount }}%</span>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { PagesComponent } from './shared/pages/pages.component';
 
 const MFE1_ROUTES: Routes = [
   {
     path: '',
-    component: AppComponent,
+    component: PagesComponent,
   },
 ];
 
