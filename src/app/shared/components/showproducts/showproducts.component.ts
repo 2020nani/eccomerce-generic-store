@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './showproducts.component.css'
 })
 export class ShowproductsComponent {
+  public assetsUrl: string;
+  constructor() {
+    this.assetsUrl = __webpack_public_path__;
+  }
+  getAssetsUrl() {
+    return this.assetsUrl;
+  }
 
 }
