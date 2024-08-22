@@ -33,7 +33,6 @@ export class ProductCardComponent {
     const totalReviews = this.reviews.length;
     const sumOfRatings = this.reviews.reduce((sum, rating) => sum + rating, 0);
     const averageRating = sumOfRatings / totalReviews;
-    console.log(Math.round(averageRating))
     return Math.round(averageRating)
   }
 

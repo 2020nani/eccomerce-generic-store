@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-image">
+    <img [src]="imageUrl" alt="Imagem do Produto">
+  </div>
+  <div class="card-content">
+    <div class="card-title">{{title}}</div>
+    <div class="card-subtitle">{{subtitle}}</div>
+    <div class="rating">
+      <ng-container *ngFor="let star of reviews; let i = index">
+        <!--fa-icon ngif [icon]="i < getRating() ? faStar : ''"></!--fa-icon-->
+      </ng-container>
+      <span>({{ reviews.length }})</span>
+      <button class="favorite-button">❤️</button>
+    </div>
+    <div class="card-rating">
+      <span class="stars">⭐⭐⭐⭐⭐</span>
+      <span class="rating-count">(289)</span>
+
+    </div>
+    <div class="card-pricing">
+      <span class="price-discount">$228</span>
+      <span class="price-original">$290</span>
+      <span class="discount-percent">-10%</span>
+    </div>
+  </div>
+</div>

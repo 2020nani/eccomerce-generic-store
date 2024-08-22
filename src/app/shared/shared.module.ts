@@ -8,13 +8,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { ShowproductsComponent } from './components/showproducts/showproducts.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProductCardTrendingComponent } from './components/product-card-trending/product-card-trending.component';
+import { ProducCardTopComponent } from './components/produc-card-top/produc-card-top.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
     PagesComponent,
     CarouselComponent,
     ShowproductsComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductCardTrendingComponent,
+    ProducCardTopComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +32,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PagesComponent,
     CarouselComponent,
     ShowproductsComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductCardTrendingComponent,
+    ProducCardTopComponent
   ]
 })
 export class SharedModule { }
