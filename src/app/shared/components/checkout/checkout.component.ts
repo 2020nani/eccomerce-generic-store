@@ -8,12 +8,13 @@ import { Component } from '@angular/core';
 export class CheckoutComponent {
   public value: number = 0;
   public assetsUrl: string;
+  public isMobile: boolean = false;
   constructor() {
     this.assetsUrl = __webpack_public_path__;
+    this.isMobile = window.innerWidth < 900;
   }
 
   addProduct(price: number){
-    alert('chamou mfe')
     this.value = this.value + price;
   }
 }

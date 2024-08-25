@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CarouselOfertsItem } from '../../models/carousel-oferts-item.model';
 
 @Component({
   selector: 'app-showproducts',
@@ -7,11 +8,16 @@ import { Component } from '@angular/core';
 })
 export class ShowproductsComponent {
   public assetsUrl: string;
+  public imagesOferts: CarouselOfertsItem[];
+  public isMobile: boolean = false;
   constructor() {
     this.assetsUrl = __webpack_public_path__;
-  }
-  getAssetsUrl() {
-    return this.assetsUrl;
+    this.isMobile = window.innerWidth < 900;
+    this.imagesOferts = [
+      { image: this.assetsUrl + 'assets/images/banner.png' },
+      { image: this.assetsUrl + 'assets/images/banner.png' },
+      { image: this.assetsUrl + 'assets/images/banner.png' }
+    ];
   }
 
 }

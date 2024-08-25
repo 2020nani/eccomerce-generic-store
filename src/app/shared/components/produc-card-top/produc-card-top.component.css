@@ -1,5 +1,5 @@
 .card {
-  width: 300px;
+  width: 92%;
   height: 480px;
   border-radius: 8px;
   overflow: hidden;
@@ -87,4 +87,10 @@
 .discount-percent {
   font-size: 14px;
   color: #e74c3c;
+}
+
+@media  screen and (max-width: 900px) {
+  .card{
+    height: auto;
+  }
 }

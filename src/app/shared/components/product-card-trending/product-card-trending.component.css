@@ -67,3 +67,9 @@
 .card-button:hover {
   background-color: #d3d3d3;
 }
+
+@media  screen and (max-width: 900px) {
+  .card{
+    width: 100%;
+  }
+}

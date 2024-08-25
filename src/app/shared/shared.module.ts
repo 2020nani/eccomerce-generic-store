@@ -11,6 +11,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductCardTrendingComponent } from './components/product-card-trending/product-card-trending.component';
 import { ProducCardTopComponent } from './components/produc-card-top/produc-card-top.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { BannerPromotionComponent } from './components/banner-promotion/banner-promotion.component';
+import { CarouselOfertsComponent } from './components/carousel-oferts/carousel-oferts.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,10 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     ShowproductsComponent,
     ProductCardComponent,
     ProductCardTrendingComponent,
-    ProducCardTopComponent
+    ProducCardTopComponent,
+    BannerPromotionComponent,
+    CarouselOfertsComponent,
+    CheckoutComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +39,10 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     ShowproductsComponent,
     ProductCardComponent,
     ProductCardTrendingComponent,
-    ProducCardTopComponent
+    ProducCardTopComponent,
+    BannerPromotionComponent,
+    CarouselOfertsComponent,
+    CheckoutComponent,
   ]
 })
 export class SharedModule { }

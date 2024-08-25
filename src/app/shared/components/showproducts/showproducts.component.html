@@ -1,4 +1,5 @@
-<div class="container-products">
+
+<div *ngIf="isMobile === false,else mobile" class="container-products">
   <div class="flash-sales-container">
     <span>Vendas Relampago</span>
     <div class="cards-content">
@@ -69,7 +70,125 @@
   <div class="top-container">
     <span>Top100</span>
     <div class="cards-content">
-
+      <app-produc-card-top
+        [imageUrl]="assetsUrl + 'assets/images/top100.png'"
+        [title]="'Tonny Black'"
+        [subtitle]="'Shoulder bag-White-Plain'"
+        [currentPrice]="69.99"
+        [originalPrice]="129.99"
+        [discount]="40"
+        [reviews]='[5, 4, 3, 5, 5, 4, 4, 3, 5, 2, 5, 4, 3]'>
+      </app-produc-card-top>
+      <app-produc-card-top
+          [imageUrl]="assetsUrl + 'assets/images/top100.png'"
+          [title]="'Tonny Black'"
+          [subtitle]="'Shoulder bag-White-Plain'"
+          [currentPrice]="69.99"
+          [originalPrice]="129.99"
+          [discount]="40"
+          [reviews]='[5, 4, 3, 5, 5, 4, 4, 3, 5, 2, 5, 4, 3]'>
+      </app-produc-card-top>
+      <app-produc-card-top
+          [imageUrl]="assetsUrl + 'assets/images/top100.png'"
+          [title]="'Tonny Black'"
+          [subtitle]="'Shoulder bag-White-Plain'"
+          [currentPrice]="69.99"
+          [originalPrice]="129.99"
+          [discount]="40"
+          [reviews]='[5, 4, 3, 5, 5, 4, 4, 3, 5, 2, 5, 4, 3]'>
+      </app-produc-card-top>
+      <app-produc-card-top
+          [imageUrl]="assetsUrl + 'assets/images/top100.png'"
+          [title]="'Tonny Black'"
+          [subtitle]="'Shoulder bag-White-Plain'"
+          [currentPrice]="69.99"
+          [originalPrice]="129.99"
+          [discount]="40"
+          [reviews]='[5, 4, 3, 5, 5, 4, 4, 3, 5, 2, 5, 4, 3]'>
+      </app-produc-card-top>
+    </div>
+    <div class="container-oferts">
+      <app-banner-promotion
+          [imageUrl]="assetsUrl + 'assets/images/banner.png'"
+          [imageUrl2]="assetsUrl + 'assets/images/banner.png'"
+      >
+      </app-banner-promotion>
+      <app-carousel-oferts
+          [imagesOferts]="imagesOferts"
+      >
+      </app-carousel-oferts>
+      <app-banner-promotion
+          [imageUrl]="assetsUrl + 'assets/images/banner.png'"
+          [imageUrl2]="assetsUrl + 'assets/images/banner.png'"
+      >
+      </app-banner-promotion>
     </div>
   </div>
 </div>
+<ng-template #mobile>
+  <div class="container-product-mobile">
+    <app-banner-promotion
+          [imageUrl]="assetsUrl + 'assets/images/banner.png'"
+          [imageUrl2]="assetsUrl + 'assets/images/banner.png'"
+      >
+    </app-banner-promotion>
+    <div class="flash-sales-container">
+      <span>Vendas Relampago</span>
+      <div class="cards-content">
+        <app-product-card
+          [imageSrc]="assetsUrl + 'assets/images/tennis.png'"
+          [title]="'Tonny Black'"
+          [description]="'Shoulder bag-White-Plain'"
+          [currentPrice]="69.99"
+          [originalPrice]="129.99"
+          [discount]="40"
+          [reviews]='[5, 4, 3, 5, 5, 4, 4, 3, 5, 2, 5, 4, 3]'>
+        </app-product-card>
+        <app-product-card
+            [imageSrc]="assetsUrl + 'assets/images/tennis.png'"
+            [title]="'Tonny Black'"
+            [description]="'Shoulder bag-White-Plain'"
+            [currentPrice]="69.99"
+            [originalPrice]="129.99"
+            [discount]="40"
+            [reviews]='[5, 4, 3, 5, 5, 4, 4, 3, 5, 2, 5, 4, 3]'>
+        </app-product-card>
+      </div>
+    </div>
+    <div class="treding-must-haves-container">
+      <span>Tendências indispensáveis</span>
+      <div class="cards-content">
+        <app-product-card-trending
+          [imageUrl]="'assets/images/top.png'"
+          [title]="'Cool & Sexy Calvin Klein'"
+          [subtitle]="'Dotted dress-Casual'"
+          [price]="69.99"
+      >
+      </app-product-card-trending>
+      </div>
+    </div>
+    <div class="top-container">
+      <span>Top100</span>
+      <div class="cards-content">
+        <app-produc-card-top
+          [imageUrl]="assetsUrl + 'assets/images/top100.png'"
+          [title]="'Tonny Black'"
+          [subtitle]="'Shoulder bag-White-Plain'"
+          [currentPrice]="69.99"
+          [originalPrice]="129.99"
+          [discount]="40"
+          [reviews]='[5, 4, 3, 5, 5, 4, 4, 3, 5, 2, 5, 4, 3]'>
+        </app-produc-card-top>
+        <app-produc-card-top
+            [imageUrl]="assetsUrl + 'assets/images/top100.png'"
+            [title]="'Tonny Black'"
+            [subtitle]="'Shoulder bag-White-Plain'"
+            [currentPrice]="69.99"
+            [originalPrice]="129.99"
+            [discount]="40"
+            [reviews]='[5, 4, 3, 5, 5, 4, 4, 3, 5, 2, 5, 4, 3]'>
+        </app-produc-card-top>
+      </div>
+    </div>
+  </div>
+</ng-template>

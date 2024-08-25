@@ -24,6 +24,13 @@ button {
   color: white;
   border-radius: 50%;
   font-size: 20px;
+
+  @media screen and (max-width: 900px) {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+  }
 }
 
 button:hover {

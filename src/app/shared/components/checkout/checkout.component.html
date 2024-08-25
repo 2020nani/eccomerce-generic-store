@@ -1,4 +1,4 @@
-<div class="icon-cart">
+<div *ngIf="isMobile === false;else mobile" class="icon-cart">
   <span (click)="addProduct(1)">
     <img [src]="assetsUrl + 'assets/images/cart.png'" alt="">Carrinho
   </span>
@@ -6,5 +6,16 @@
     <div class="counter">{{ value }}</div>
   </div>
 </div>
+
+<ng-template #mobile>
+  <div class="icon-cart">
+    <span (click)="addProduct(1)">
+      <img [src]="assetsUrl + 'assets/images/cart-mobile.png'" alt="">
+    </span>
+    <div class="counter-container">
+      <div class="counter">{{ value }}</div>
+    </div>
+  </div>
+</ng-template>
 
 
