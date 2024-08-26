@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CarouselOfertsItem } from '../../models/carousel-oferts-item.model';
 
 @Component({
@@ -18,6 +18,11 @@ export class ShowproductsComponent {
       { image: this.assetsUrl + 'assets/images/banner.png' },
       { image: this.assetsUrl + 'assets/images/banner.png' }
     ];
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.isMobile = window.innerWidth < 900;
   }
 
 }
