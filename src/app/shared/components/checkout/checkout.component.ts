@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-checkout',
@@ -11,6 +11,11 @@ export class CheckoutComponent {
   public isMobile: boolean = false;
   constructor() {
     this.assetsUrl = __webpack_public_path__;
+    this.isMobile = window.innerWidth < 900;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
     this.isMobile = window.innerWidth < 900;
   }
 

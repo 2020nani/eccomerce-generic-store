@@ -42,7 +42,7 @@ import { CarouselOfertsComponent } from './components/carousel-oferts/carousel-o
     ProducCardTopComponent,
     BannerPromotionComponent,
     CarouselOfertsComponent,
-    CheckoutComponent,
+    CheckoutComponent
   ]
 })
 export class SharedModule { }

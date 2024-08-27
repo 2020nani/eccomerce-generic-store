@@ -6,7 +6,7 @@ const MFE1_ROUTES: Routes = [
   {
     path: '',
     component: PagesComponent,
-  },
+  }
 ];
 
 @NgModule({
