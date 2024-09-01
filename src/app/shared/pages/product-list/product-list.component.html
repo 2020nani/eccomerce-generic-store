@@ -1,0 +1,147 @@
+<div class="container-list-product">
+  <div *ngIf="!isMobile || isViewMenu" class="sidebar">
+    <a [routerLink]="['product-detail']">Ir para Componente Filho</a>
+    <div style="width: 90%; display: flex;justify-content: space-between">
+      <img [src]="'assets/svg/icon-category.svg' | assetsUrl" alt="">
+      <strong>All Categories</strong>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filter-group">
+      <span>BRAND</span>
+      <input type="text" placeholder="Search" [(ngModel)]="brandFilter">
+    </div>
+
+    <div class="filter-group">
+      <span>MODEL</span>
+      <div *ngFor="let model of models">
+        <input type="checkbox" [(ngModel)]="model.selected">{{ model.name }}
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <span>STYLE</span>
+      <div *ngFor="let style of styles">
+        <input type="checkbox" [(ngModel)]="style.selected">{{ style.name }}
+      </div>
+    </div>
+
+    <div class="filter-group" >
+      <span>COLOR</span>
+      <div *ngFor="let color of colors">
+        <input type="radio" name="color" [(ngModel)]="selectedColor" [value]="color">
+        <span [style.backgroundColor]="color" class="color-box"></span>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <span>SIZE</span>
+      <div *ngFor="let size of sizes">
+        <input type="checkbox" [(ngModel)]="size.selected"> {{ size.value }}
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <span>PRICE</span>
+      <input type="range" min="5" max="500" [(ngModel)]="priceRange">
+      <div>
+        Min: {{ priceRange[0] }} - Max: {{ priceRange[1] }}
+      </div>
+    </div>
+  </div>
+
+  <button *ngIf="isMobile" (click)="showMenu()">teste</button>
+
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts()">
+      <img [src]="product.image | assetsUrl" alt="{{ product.name }}">
+      <span>{{ product.name }}</span>
+      <p>{{ product.category }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+  </div>
+</div>

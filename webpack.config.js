@@ -10,6 +10,7 @@ module.exports = withModuleFederationPlugin({
   exposes: {
     "./Module": "./src/app/app.module.ts",
     "./Component": "./src/app/shared/components/checkout/checkout.component.ts",
+    "./ComponentP":"./src/app/shared/modal/modal-menu/modal-menu.component.ts",
   },
 
   shared: {

@@ -18,7 +18,7 @@ interface Slide {
 export class CarouselComponent implements OnInit, OnDestroy {
   slides: Slide[] = [
     {
-      image: 'http://localhost:4201/assets/images/summer.png',
+      image: 'assets/images/summer.png',
       title: 'KIMONOS, CAFTANS & PAREOS',
       description: 'Poolside glam included From $4.99',
       promotionTitle: 'Summer Essentials',
@@ -27,7 +27,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
       ctaText: 'SHOP NOW'
     },
     {
-      image: 'http://localhost:4201/assets/images/summer.png',
+      image: 'assets/images/summer.png',
       title: 'KIMONOS, CAFTANS & PAREOS',
       description: 'Poolside glam included From $4.99',
       promotionTitle: 'Summer Essentials',
@@ -35,7 +35,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
       promotionPeriod: '19 Jul-30 Jul',
       ctaText: 'SHOP NOW'
     },{
-      image: 'assets/images/logo.png',
+      image: 'assets/images/summer.png',
       title: 'KIMONOS, CAFTANS & PAREOS',
       description: 'Poolside glam included From $4.99',
       promotionTitle: 'Summer Essentials',

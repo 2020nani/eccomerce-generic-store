@@ -1,3 +1,4 @@
+import { AssetsUrlPipe } from './pipes/assets-url.pipe';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PagesComponent } from './pages/pages.component';
@@ -13,6 +14,11 @@ import { ProducCardTopComponent } from './components/produc-card-top/produc-card
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { BannerPromotionComponent } from './components/banner-promotion/banner-promotion.component';
 import { CarouselOfertsComponent } from './components/carousel-oferts/carousel-oferts.component';
+import { ProductListComponent } from './pages/product-list/product-list.component';
+import { CheckboxControlValueAccessor, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalMenuComponent } from './modal/modal-menu/modal-menu.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,14 +30,21 @@ import { CarouselOfertsComponent } from './components/carousel-oferts/carousel-o
     ProducCardTopComponent,
     BannerPromotionComponent,
     CarouselOfertsComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ProductListComponent,
+    ModalMenuComponent,
+    ProductDetailComponent,
+    AssetsUrlPipe
   ],
   imports: [
     CommonModule,
     MatCardModule,
     MatIconModule,
     MatButtonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    RouterModule,
+    ReactiveFormsModule,
   ],
   exports: [
     PagesComponent,
@@ -42,7 +55,10 @@ import { CarouselOfertsComponent } from './components/carousel-oferts/carousel-o
     ProducCardTopComponent,
     BannerPromotionComponent,
     CarouselOfertsComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ProductListComponent,
+    ProductDetailComponent,
+    ModalMenuComponent
   ]
 })
 export class SharedModule { }

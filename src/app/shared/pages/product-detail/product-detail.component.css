@@ -1,0 +1,104 @@
+.product-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.product-images img {
+  width: 300px;
+  height: auto;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-selector, .size-selector, .quantity-selector {
+  margin: 10px 0;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.add-to-bag, .add-to-wishlist {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.side-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-images img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-container-detail-checkout {
+  border: 1px dashed purple;
+  padding: 20px;
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.price {
+  color: purple;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.shop-now, .add-to-basket {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.shop-now {
+  background-color: purple;
+}
+
+.add-to-basket {
+  background-color: blue;
+}
+
+.insurance {
+  background-color: #f3e5f5;
+  padding: 10px;
+  border: 1px dashed purple;
+  font-size: 14px;
+}

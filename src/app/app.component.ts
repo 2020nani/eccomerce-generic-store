@@ -6,11 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  public assetsUrl: string;
-  constructor() {
-    this.assetsUrl = __webpack_public_path__;
-  }
-  getAssetsUrl() {
-    return this.assetsUrl;
-  }
+
 }
