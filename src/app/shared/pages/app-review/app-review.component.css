@@ -1,0 +1,129 @@
+.review-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.review-content {
+  width: 60vw;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.total-review-rate {
+  display: flex;
+  text-align: start;
+  h2{
+    font-size: 1.3rem;
+    font-family: Roboto, sans-serif;
+  }
+}
+
+.average-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  span{
+    font-size: 1rem;
+    font-family: Roboto, sans-serif;
+  }
+}
+
+.average-rating span {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.stars span {
+  color: gold;
+  font-size: 20px;
+}
+
+.rating-breakdown {
+  width: 50%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.rating-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.bar {
+  width: 60%;
+  height: 10px;
+  background-color: #e0e0e0;
+  margin: 0 10px;
+  position: relative;
+}
+
+.fill {
+  height: 100%;
+  background-color: gold;
+  position: absolute;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.review-container {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stars {
+  font-size: 24px;
+  color: gold;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.author {
+  font-size: 14px;
+  color: gray;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.advantages, .disadvantages, .review {
+  width: 30%;
+}
+
+.images {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.images img {
+  width: 10%;
+  height: auto;
+  margin: 0 0 0 20px;
+}

@@ -1,0 +1,48 @@
+<div class="shipping-container">
+  <h2>Shipping</h2>
+  <p>Calculate the shipping cost by region</p>
+  <div class="shipping-to">
+    <label for="city">Shipping to</label>
+    <select id="city">
+      <option>Sydney</option>
+      <!-- Adicione mais opções conforme necessário -->
+    </select>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Shipping Company</th>
+        <th>Shipping Cost</th>
+        <th>Estimated Delivery Time</th>
+        <th>Packet Insurance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>AUSFF</td>
+        <td>Free</td>
+        <td>14-21 days</td>
+        <td>Unavailable</td>
+      </tr>
+      <tr>
+        <td>RACE</td>
+        <td>$15</td>
+        <td>7-14 days</td>
+        <td>Available</td>
+      </tr>
+      <tr>
+        <td>Transco Cargo</td>
+        <td>$21</td>
+        <td>3-7 days</td>
+        <td>Available</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Payment</h2>
+  <p>Payment methods supported with our platform</p>
+  <div class="payment-methods">
+    <img [src]="'assets/svg/paypal.svg' | assetsUrl" alt="PayPal">
+    <img [src]="'assets/svg/mastercard.svg' | assetsUrl" alt="Mastercard">
+    <img [src]="'assets/svg/bitcoin.svg' | assetsUrl" alt="Bitcoin">
+  </div>
+</div>

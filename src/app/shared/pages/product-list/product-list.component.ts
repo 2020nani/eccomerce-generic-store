@@ -57,7 +57,6 @@ export class ProductListComponent {
   }
 
   showMenu(){
-    alert(this.isViewMenu)
     this.isViewMenu = !this.isViewMenu;
   }
 

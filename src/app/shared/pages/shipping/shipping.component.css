@@ -1,0 +1,30 @@
+.shipping-container {
+  width: 90vw;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  h2{
+    font-size: 1.5rem;
+  }
+}
+
+.shipping-to {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.payment-methods img {
+  width: 100px;
+  margin-right: 10px;
+}

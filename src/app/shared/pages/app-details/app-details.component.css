@@ -1,0 +1,66 @@
+.product-details-container {
+  width: 96%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.product-description {
+  width: 45%;
+}
+
+.product-description h3, .product-composition h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-description p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.product-description h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-description ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.product-description ul li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.product-composition {
+  width: 45%;
+}
+
+.product-composition p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.product-composition ul.care-instructions {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.product-composition ul.care-instructions li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.show-more {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}

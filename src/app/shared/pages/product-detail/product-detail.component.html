@@ -10,39 +10,115 @@
       <img [src]="'assets/images/product.png' | assetsUrl" alt="Imagem Central">
     </div>
   </div>
-  <div class="product-info">
-    <h1>SHORT PRINTED DRESS</h1>
-    <p class="price">$39.99</p>
-    <div class="color-selector">
-      <div class="color-option" style="background-color: blue;"></div>
-      <div class="color-option" style="background-color: red;"></div>
-      <div class="color-option" style="background-color: green;"></div>
+
+  <div class="product-container">
+    <div class="product-content">
+      <h2>SHORT PRINTED DRESS</h2>
+      <p>$39.99</p>
+
+      <div class="product-size">
+        <span>Size</span>
+        <div class="size-options">
+          <button>XS</button>
+          <button>S</button>
+          <button>M</button>
+          <button>L</button>
+          <button>XL</button>
+        </div>
+        <span class="size-guideline">Size guideline</span>
+      </div>
+
+      <div class="product-color">
+        <span>Color</span>
+        <div class="color-options">
+          <div class="color-circle" style="background-color: #4a90e2;"></div>
+          <div class="color-circle" style="background-color: #50e3c2;"></div>
+          <div class="color-circle" style="background-color: #bd10e0;"></div>
+          <div class="color-circle" style="background-color: #f5a623;"></div>
+        </div>
+      </div>
+
+      <div class="product-shipping">
+        <span>Shipping</span>
+        <p>Free Shipping to Victoria territory</p>
+        <p>Delivery Time: 14-17 days</p>
+      </div>
+
+      <div class="product-quantity">
+        <span>Quantity</span>
+        <div class="quantity-controls">
+          <button>-</button>
+          <span>2</span>
+          <button>+</button>
+        </div>
+        <p>50 available / 104 sold</p>
+      </div>
     </div>
-    <div class="size-selector">
-      <label for="size">Size:</label>
-      <select id="size">
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
-      </select>
-    </div>
-    <div class="quantity-selector">
-      <label for="quantity">Quantity:</label>
-      <input type="number" id="quantity" min="1" value="1">
-    </div>
-    <div class="product-container-detail-checkout">
-      <div class="price">$79.98</div>
-      <div class="buttons">
+    <div class="checkout-container">
+      <div class="price-info">
+        <h2>$79.98</h2>
+        <div class="shipping-insurance">
+          <input type="checkbox" id="insurance" />
+          <label for="insurance">
+            Add shipping insurance for $9 (declared value only if the package gets lost, stolen or damaged.)
+          </label>
+        </div>
+      </div>
+
+      <div class="actions">
         <button class="shop-now">SHOP NOW</button>
         <button class="add-to-basket">ADD TO BASKET</button>
       </div>
-      <div class="insurance">
-        <label>
-          <input type="checkbox">
-          Add shipping insurance for $9 (declared value only if the package gets lost, stolen or damaged)
-        </label>
-      </div>
     </div>
+
   </div>
 </div>
+<div class="sidenav-container">
+  <div style="display: flex; width: 50%; justify-content: space-between">
+    <span [routerLink]="'details'">Detalhe produtos</span>
+    <span [routerLink]="'reviews'">Reviews</span>
+    <span [routerLink]="'shipping'">Envio e Compra</span>
+  </div>
+  <router-outlet></router-outlet>
+  <div class="show-more">
+    <p *ngIf="isShowMore" style="cursor: pointer" (click)="showMore()">&uarr; SHOW LESS</p>
+    <p *ngIf="!isShowMore" style="cursor: pointer" (click)="showMore()">&uarr; SHOW MORE</p>
+  </div>
+  <div *ngIf="isShowMore" class="recommendation-container">
+    <h2>YOU MIGHT ALSO LIKE</h2>
+    <div class="carousel">
+      <div class="product">
+        <img [src]="'assets/images/tennis.png' | assetsUrl" alt="Short Printed Dress 1">
+        <p>$69.99</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="product">
+        <img [src]="'assets/images/top100.png' | assetsUrl" alt="Short Printed Dress 2">
+        <p>$65</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="product">
+        <img [src]="'assets/images/product.png' | assetsUrl" alt="Short Printed Dress 3">
+        <p>$42</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="product">
+        <img [src]="'assets/images/tennis.png' | assetsUrl" alt="Short Printed Dress 4">
+        <p>$36</p>
+        <button>Add to cart</button>
+      </div>
+      <div class="product">
+        <img [src]="'assets/images/product.png' | assetsUrl" alt="Short Printed Dress 3">
+        <p>$42</p>
+        <button>Add to cart</button>
+      </div>
+    </div>
+    <div class="navigation">
+      <button class="prev">‹</button>
+      <button class="next">›</button>
+    </div>
+  </div>
+
+</div>
+
 

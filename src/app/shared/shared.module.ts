@@ -19,6 +19,8 @@ import { CheckboxControlValueAccessor, FormsModule, ReactiveFormsModule } from '
 import { ModalMenuComponent } from './modal/modal-menu/modal-menu.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { RouterModule } from '@angular/router';
+import { AppReviewComponent } from './pages/app-review/app-review.component';
+import { ShippingComponent } from './pages/shipping/shipping.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { RouterModule } from '@angular/router';
     ProductListComponent,
     ModalMenuComponent,
     ProductDetailComponent,
+    AppReviewComponent,
+    ShippingComponent,
     AssetsUrlPipe
   ],
   imports: [
@@ -58,7 +62,9 @@ import { RouterModule } from '@angular/router';
     CheckoutComponent,
     ProductListComponent,
     ProductDetailComponent,
-    ModalMenuComponent
+    ModalMenuComponent,
+    ShippingComponent,
+    AppReviewComponent
   ]
 })
 export class SharedModule { }

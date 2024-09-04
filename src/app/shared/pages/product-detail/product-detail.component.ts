@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './product-detail.component.css'
 })
 export class ProductDetailComponent {
+  public isShowMore: boolean = false;
 
+
+  showMore(){
+    this.isShowMore = !this.isShowMore
+  }
 }
